@@ -1,20 +1,31 @@
-body{
+  * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
             background-color: black;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            flex-direction: column;
+            width: 100vw;
             overflow: hidden;
             position: relative;
         }
-        video {
-            width: 100vw;
-            height: 100vh;
-            object-fit: contain;
+        .video-container {
             position: relative;
+            width: 80vw; /* Keeps black areas on the sides */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             z-index: 1;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
         .controls {
             display: none;
@@ -27,11 +38,11 @@ body{
             background: red;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 24px;
             font-size: 18px;
             margin: 10px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 8px;
         }
         button:hover {
             background: darkred;
@@ -45,13 +56,13 @@ body{
             pointer-events: none;
             z-index: 0;
         }
-        .floating-heart, .floating-butterfly {
+        .floating-heart {
             position: absolute;
-            animation: floatAnimation 7s infinite ease-in-out;
-            font-size: 90px; /* Increased size */
+            font-size: 50px; /* Increased size */
+            animation: floatAnimation 6s infinite ease-in-out;
         }
         @keyframes floatAnimation {
             0% { transform: translateY(0px); opacity: 1; }
-            50% { transform: translateY(-50px); opacity: 0.8; }
-            100% { transform: translateY(-100px); opacity: 0; }
+            50% { transform: translateY(-60px); opacity: 0.8; }
+            100% { transform: translateY(-120px); opacity: 0; }
         }
