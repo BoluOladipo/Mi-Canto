@@ -1,4 +1,4 @@
-   const video = document.getElementById("loveVideo");
+     const video = document.getElementById("loveVideo");
         const controls = document.getElementById("controls");
         const animationContainer = document.getElementById("animationContainer");
         
