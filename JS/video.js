@@ -5,7 +5,9 @@
         video.onended = () => {
             controls.style.display = "block";
         };
-        
+        function playVideo() {
+        document.getElementById("loveVideo").play();
+    }
         function replayVideo() {
             video.currentTime = 0;
             video.play();
